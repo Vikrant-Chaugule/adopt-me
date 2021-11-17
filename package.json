@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Vikrant-Chaugule/adopt-me/issues"
   },
-  "homepage": "https://github.com/Vikrant-Chaugule/adopt-me#readme"
+  "homepage": "https://github.com/Vikrant-Chaugule/adopt-me#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
 }
