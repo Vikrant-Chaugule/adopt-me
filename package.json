@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Vikrant-Chaugule/adopt-me#readme",
   "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^8.1.0",
     "prettier": "^2.4.1"
   }
 }
