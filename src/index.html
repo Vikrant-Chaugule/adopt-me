@@ -11,11 +11,11 @@
     <!-- content of this div will be replaced by the React component App -->
     <div id="root">Not rendered</div>
 
-    <!--  below scripts add react library to our vanilla projectf -->
+    <!--  below scripts add react library to our vanilla project -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     
-    <!-- create a react component -->
+    <!-- create a react component - inline style 
     <script>
         const App = () => {
             return React.createElement(
@@ -30,6 +30,11 @@
         };
         // tell React, where to render this component
         ReactDOM.render(React.createElement(App), document.getElementById("root"));
-    </script>
+    </script> -->
+
+
+    <!-- add external react component -->
+    <script src="App.js"></script>
+
 </body>
 </html >
