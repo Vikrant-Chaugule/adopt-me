@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import Pet from "./Pet";
 
@@ -35,4 +34,6 @@ const App = () => {
 };
 
 // tell React, where to render this component
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+// ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+ReactDOM.render(<App />, document.getElementById("root"));

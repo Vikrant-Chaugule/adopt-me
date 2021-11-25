@@ -1,6 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-
 // const Pet = ({ name, animal, breed }) => {
 //   return React.createElement("div", {}, [
 //     React.createElement("h2", {}, name),
