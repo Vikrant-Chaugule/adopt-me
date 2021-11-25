@@ -1,6 +1,18 @@
 {
-  "extends": ["eslint:recommended", "prettier"],
-  "plugins": [],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+
+    // we don't need to import react in every file as Babel will do it for us, so this will turn off lint error
+    "react/react-in-jsx-scope": 0
+  },
+  "plugins": ["react", "import", "jsx-a11y"],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
@@ -12,5 +24,12 @@
     "es6": true,
     "browser": true,
     "node": true
+  },
+  "settings": {
+    // let eslint know which version of react we are using
+    "react": {
+      // look for react version in package.json
+      "version": "detect"
+    }
   }
 }
