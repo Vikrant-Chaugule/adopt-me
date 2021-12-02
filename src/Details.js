@@ -2,12 +2,17 @@ import { Component } from "react";
 import { withRouter } from "react-router";
 
 class Details extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoading: true,
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     isLoading: true,
+  //   };
+  // }
+
+  // new javascript field declaration
+  state = {
+    isLoading: true,
+  };
 
   async componentDidMount() {
     const res = await fetch(
