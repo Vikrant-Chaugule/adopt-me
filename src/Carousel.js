@@ -6,9 +6,10 @@ class Carousel extends Component {
   };
 
   // if no props are passed in, we will use the default props
-  static defaultProps = {
-    images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
-  };
+  // commenting this as ErrorBoundary is taking care of this
+  // static defaultProps = {
+  //   images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
+  // };
 
   handleIndexClick = (event) => {
     // data-index is the index of the image in the array which is accessed as index from dataset
