@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
+import Modal from "./Modal";
 
 class Details extends Component {
   // constructor(props) {
@@ -15,6 +16,7 @@ class Details extends Component {
   // new javascript field declaration
   state = {
     isLoading: true,
+    showModal: false,
   };
 
   async componentDidMount() {
@@ -32,11 +34,15 @@ class Details extends Component {
     );
   }
 
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
+
+  adopt = () => (window.location = "http://bit.ly/pet-adopt");
+
   render() {
     if (this.state.isLoading) return <h2>Loading...</h2>;
 
     // every state is coming from the API
-    const { animal, breed, city, state, description, name, images } =
+    const { animal, breed, city, state, description, name, images, showModal } =
       this.state;
 
     return (
@@ -50,10 +56,24 @@ class Details extends Component {
           {/* access context value in class component */}
           <ThemeContext.Consumer>
             {([theme]) => (
-              <button style={{ backgroundColor: theme }}>Adopt {name}</button>
+              <button
+                onClick={this.toggleModal}
+                style={{ backgroundColor: theme }}
+              >
+                Adopt {name}
+              </button>
             )}
           </ThemeContext.Consumer>
           <p>{description}</p>
+          {showModal ? (
+            <Modal>
+              <h1>Would you like to adopt {name}?</h1>
+              <div className="buttons">
+                <button onClick={this.adopt}>Yes</button>
+                <button onClick={this.toggleModal}>No</button>
+              </div>
+            </Modal>
+          ) : null}
         </div>
       </div>
     );
