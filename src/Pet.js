@@ -1,3 +1,5 @@
+/* eslint-disable import/named */
+// eslint-disable-next-line import/namespace
 import { Link } from "react-router-dom";
 
 // const Pet = ({ name, animal, breed }) => {

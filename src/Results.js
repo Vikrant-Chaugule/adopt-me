@@ -6,7 +6,8 @@ const Results = ({ pets }) => {
       {!pets.length ? (
         <h2>No Pets found</h2>
       ) : (
-        pets?.map(({ id, name, animal, breed, images, city, state }) => (
+        pets &&
+        pets.map(({ id, name, animal, breed, images, city, state }) => (
           <Pet
             key={id}
             name={name}
